@@ -1,0 +1,305 @@
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+<div class="rg-quarter-odds-article">
+<style>
+.rg-quarter-odds-article * { box-sizing: border-box; }
+.rg-quarter-odds-article {
+  --rg-accent: #F5A623;
+  --rg-dark: #1E2433;
+  --rg-border: #2E3548;
+  font-family: "Source Serif 4", Georgia, serif;
+  color: #23262e;
+  line-height: 1.62;
+  font-size: 18px;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 8px 0 40px;
+}
+.rg-quarter-odds-article h1 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 34px;
+  line-height: 1.18;
+  color: var(--rg-dark);
+  font-weight: 700;
+  margin: 0 0 22px;
+}
+.rg-quarter-odds-article h2 {
+  font-size: 25px;
+  color: var(--rg-dark);
+  font-weight: 700;
+  border-left: 5px solid var(--rg-accent);
+  padding-left: 14px;
+  margin: 40px 0 16px;
+  line-height: 1.2;
+}
+.rg-quarter-odds-article h3 {
+  font-size: 20px;
+  color: var(--rg-dark);
+  font-weight: 700;
+  margin: 30px 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.rg-quarter-odds-article p { margin: 0 0 15px; }
+.rg-quarter-odds-article strong { color: var(--rg-dark); }
+.rg-quarter-odds-article .rg-lede { font-size: 19px; }
+.rg-quarter-odds-article .rg-findings { list-style: none; padding: 0; margin: 0 0 10px; }
+.rg-quarter-odds-article .rg-findings li {
+  position: relative;
+  padding: 12px 14px 12px 20px;
+  border-bottom: 1px solid #ece9e3;
+}
+.rg-quarter-odds-article .rg-findings li:before {
+  content: ""; position: absolute; left: 0; top: 18px;
+  width: 7px; height: 7px; border-radius: 50%; background: var(--rg-accent);
+}
+.rg-quarter-odds-article .rg-badge {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--rg-accent);
+  color: #1a1300;
+  font-weight: 700;
+  font-size: 15px;
+  min-width: 32px; height: 32px;
+  border-radius: 8px;
+  display: inline-flex; align-items: center; justify-content: center;
+  flex: none;
+}
+.rg-quarter-odds-article .rg-badge.rank1 { background: var(--rg-accent); box-shadow: 0 0 0 3px rgba(245,166,35,.25); }
+.rg-quarter-odds-article .rg-details {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-style: italic; font-size: 14px; color: #6b6f78;
+  margin: 0 0 12px 44px;
+}
+.rg-quarter-odds-article .rg-pills {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 0 0 6px 44px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+.rg-quarter-odds-article .rg-pill {
+  background: #f4f2ec; border: 1px solid #e7e2d8;
+  border-radius: 999px; padding: 5px 12px; font-size: 13px; color: #3a3d45;
+}
+.rg-quarter-odds-article .rg-pill b { color: var(--rg-dark); }
+.rg-quarter-odds-article .rg-entry > p { margin-left: 44px; }
+.rg-quarter-odds-article .rg-embed {
+  border: 1px solid var(--rg-border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 26px 0;
+  background: #fff;
+}
+.rg-quarter-odds-article .rg-embed iframe { display: block; width: 100%; border: 0; }
+.rg-quarter-odds-article table {
+  width: 100%; border-collapse: collapse; margin: 16px 0 18px;
+  font-family: system-ui, -apple-system, sans-serif; font-size: 15px;
+}
+.rg-quarter-odds-article thead th {
+  background: var(--rg-dark); color: #fff; text-align: left;
+  padding: 11px 14px; font-weight: 600;
+}
+.rg-quarter-odds-article tbody td { padding: 10px 14px; border-bottom: 1px solid #ece9e3; }
+.rg-quarter-odds-article tbody tr:nth-child(even) { background: #faf8f3; }
+.rg-quarter-odds-article blockquote {
+  border-left: 5px solid var(--rg-accent);
+  background: var(--rg-dark);
+  color: #eef0f4;
+  margin: 16px 0;
+  padding: 22px 26px;
+  border-radius: 0 12px 12px 0;
+}
+.rg-quarter-odds-article blockquote p { margin: 0 0 14px; }
+.rg-quarter-odds-article blockquote p:last-child { margin: 0; font-weight: 700; color: #fff; }
+.rg-quarter-odds-article .rg-attrib {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px; color: #6b6f78; margin: 6px 0 0;
+}
+.rg-quarter-odds-article .rg-closer { font-style: italic; font-size: 19px; color: var(--rg-dark); margin-top: 16px; }
+.rg-quarter-odds-article .rg-method p { font-size: 16px; }
+.rg-quarter-odds-article .rg-method b { color: var(--rg-dark); }
+.rg-quarter-odds-article .rg-sources { list-style: none; padding: 0; margin: 0; font-family: system-ui, -apple-system, sans-serif; font-size: 15px; }
+.rg-quarter-odds-article .rg-sources li { padding: 7px 0; border-bottom: 1px solid #ece9e3; }
+.rg-quarter-odds-article a { color: var(--rg-accent); text-decoration: none; border-bottom: 1px solid rgba(245,166,35,.4); }
+.rg-quarter-odds-article a:hover { border-bottom-color: var(--rg-accent); }
+@media (max-width: 600px) {
+  .rg-quarter-odds-article { font-size: 17px; padding: 4px 16px 32px; }
+  .rg-quarter-odds-article h1 { font-size: 27px; }
+  .rg-quarter-odds-article h2 { font-size: 22px; }
+  .rg-quarter-odds-article .rg-details,
+  .rg-quarter-odds-article .rg-pills,
+  .rg-quarter-odds-article .rg-entry > p { margin-left: 0; }
+}
+</style>
+
+<h1>The Best States to Find the 250th Anniversary Quarter (2026)</h1>
+
+<h2>250,000 Rare Quarters Are Hiding in Your Change</h2>
+<p class="rg-lede">The U.S. Mint just hid 250,000 rare quarters in everyday change to mark America's 250th birthday. Most people will hold one and never know it.</p>
+<p>The coin is a special cut of the 2026 Declaration of Independence quarter. No mint mark. Nearly identical to the hundreds of millions of standard 250 year quarters already in tills.</p>
+<p>We modeled where those 250,000 are most likely to turn up, weighting each state by how much cash it still handles. The twist? Where you live barely matters. How cash-heavy your state is matters a lot.</p>
+<p>Nationally, your shot is 0.074%. That is 1 in 1,360, a coin priced like a +135,900 long shot.</p>
+
+<h2>Key Findings</h2>
+<ul class="rg-findings">
+<li><strong>Mississippi tops the country</strong> with a 0.081% shot, or 1 in 1,242.</li>
+<li><strong>Vermont and Virginia rank dead last</strong> at 0.069%, or 1 in 1,449.</li>
+<li><strong>National odds are 1 in 1,360</strong>, a 0.074% shot priced like +135,900.</li>
+<li><strong>Cash beats crowds.</strong> The most unbanked states win, whatever their size.</li>
+<li><strong>California hoards the coins</strong> at an estimated 29,020, yet ranks just 17th per person.</li>
+<li><strong>The whole spread is tiny</strong>, 0.069% to 0.081%. Best beats worst by only 17%.</li>
+</ul>
+
+<div class="rg-embed">
+<iframe src="https://aharris-jpg.github.io/250-year-quarters/heatmap.html" height="580" title="Implied probability of finding the 250th anniversary quarter by state"></iframe>
+</div>
+
+<div class="rg-embed">
+<iframe src="https://aharris-jpg.github.io/250-year-quarters/chart.html" height="660" title="250th anniversary quarter implied probability ranked by state"></iframe>
+</div>
+
+<h2>The 10 Best States to Find One</h2>
+<p>First, know what you are hunting. The rare coin has a small privy mark left of Jefferson and a blank space where the P or D mint mark usually sits. Mark present, mint mark gone. That is your coin.</p>
+
+<div class="rg-entry">
+<h3><span class="rg-badge rank1">1</span> Mississippi</h3>
+<p class="rg-details">Implied probability 0.0805% &middot; Odds 1 in 1,242 &middot; Est. quarters 2,370</p>
+<p>Mississippi wins on cash. It has the highest unbanked rate in the country at 9.4%, so more coins move hand to hand instead of sitting in accounts.</p>
+<p>More churn, better odds. Simple as that.</p>
+<div class="rg-pills"><span class="rg-pill"><b>Implied prob</b> 0.0805%</span><span class="rg-pill"><b>Odds</b> 1 in 1,242</span><span class="rg-pill"><b>Est. quarters</b> 2,370</span><span class="rg-pill"><b>Cash index</b> 1.188</span></div>
+</div>
+
+<div class="rg-entry">
+<h3><span class="rg-badge">2</span> Louisiana</h3>
+<p class="rg-details">Implied probability 0.0786% &middot; Odds 1 in 1,272 &middot; Est. quarters 3,610</p>
+<p>Louisiana runs on cash too. Plenty of households sit outside the banking system, and New Orleans tips and small spends keep coins moving.</p>
+<p>An estimated 3,610 rare quarters are out there statewide.</p>
+<div class="rg-pills"><span class="rg-pill"><b>Implied prob</b> 0.0786%</span><span class="rg-pill"><b>Odds</b> 1 in 1,272</span><span class="rg-pill"><b>Est. quarters</b> 3,610</span><span class="rg-pill"><b>Cash index</b> 1.16</span></div>
+</div>
+
+<div class="rg-embed">
+<iframe src="https://aharris-jpg.github.io/250-year-quarters/pic1.html" height="410" title="2026 Declaration of Independence quarter with July 4 privy mark"></iframe>
+</div>
+
+<div class="rg-entry">
+<h3><span class="rg-badge">3</span> Georgia</h3>
+<p class="rg-details">Implied probability 0.0773% &middot; Odds 1 in 1,294 &middot; Est. quarters 8,640</p>
+<p>Georgia is the rare state with strong odds and real volume. Atlanta's service economy keeps small change in constant motion.</p>
+<p>That leaves an estimated 8,640 coins in play, one of the deepest pools near the top.</p>
+<div class="rg-pills"><span class="rg-pill"><b>Implied prob</b> 0.0773%</span><span class="rg-pill"><b>Odds</b> 1 in 1,294</span><span class="rg-pill"><b>Est. quarters</b> 8,640</span><span class="rg-pill"><b>Cash index</b> 1.14</span></div>
+</div>
+
+<div class="rg-entry">
+<h3><span class="rg-badge">4</span> Illinois</h3>
+<p class="rg-details">Implied probability 0.0767% &middot; Odds 1 in 1,303 &middot; Est. quarters 9,750</p>
+<p>Illinois posts the best odds of any big Northern state. Chicago anchors a huge, cash-active population.</p>
+<p>Nearly 9,750 coins are estimated statewide. Strong odds, deep pool.</p>
+<div class="rg-pills"><span class="rg-pill"><b>Implied prob</b> 0.0767%</span><span class="rg-pill"><b>Odds</b> 1 in 1,303</span><span class="rg-pill"><b>Est. quarters</b> 9,750</span><span class="rg-pill"><b>Cash index</b> 1.132</span></div>
+</div>
+
+<div class="rg-entry">
+<h3><span class="rg-badge">5</span> Texas</h3>
+<p class="rg-details">Implied probability 0.0766% &middot; Odds 1 in 1,306 &middot; Est. quarters 23,960</p>
+<p>Texas is the volume play. No top-10 state holds more coins, an estimated 23,960.</p>
+<p>Solid cash use keeps its per-person odds above the national line. Best of both worlds.</p>
+<div class="rg-pills"><span class="rg-pill"><b>Implied prob</b> 0.0766%</span><span class="rg-pill"><b>Odds</b> 1 in 1,306</span><span class="rg-pill"><b>Est. quarters</b> 23,960</span><span class="rg-pill"><b>Cash index</b> 1.13</span></div>
+</div>
+
+<div class="rg-embed">
+<iframe src="https://aharris-jpg.github.io/250-year-quarters/pic2.html" height="410" title="Pile of 2026 Declaration of Independence quarters"></iframe>
+</div>
+
+<div class="rg-entry">
+<h3><span class="rg-badge">6</span> Arkansas</h3>
+<p class="rg-details">Implied probability 0.0764% &middot; Odds 1 in 1,308 &middot; Est. quarters 2,360</p>
+<p>Arkansas punches above its size. Heavy cash reliance in a smaller population keeps its per-person number sharp.</p>
+<p>About 2,360 coins are estimated across the state.</p>
+<div class="rg-pills"><span class="rg-pill"><b>Implied prob</b> 0.0764%</span><span class="rg-pill"><b>Odds</b> 1 in 1,308</span><span class="rg-pill"><b>Est. quarters</b> 2,360</span><span class="rg-pill"><b>Cash index</b> 1.128</span></div>
+</div>
+
+<div class="rg-entry">
+<h3><span class="rg-badge">7</span> Oklahoma</h3>
+<p class="rg-details">Implied probability 0.0762% &middot; Odds 1 in 1,313 &middot; Est. quarters 3,120</p>
+<p>Oklahoma's steady cash economy lifts it clear of the national line.</p>
+<p>An estimated 3,120 coins are circulating statewide.</p>
+<div class="rg-pills"><span class="rg-pill"><b>Implied prob</b> 0.0762%</span><span class="rg-pill"><b>Odds</b> 1 in 1,313</span><span class="rg-pill"><b>Est. quarters</b> 3,120</span><span class="rg-pill"><b>Cash index</b> 1.124</span></div>
+</div>
+
+<div class="rg-entry">
+<h3><span class="rg-badge">8</span> Nevada</h3>
+<p class="rg-details">Implied probability 0.0760% &middot; Odds 1 in 1,315 &middot; Est. quarters 2,480</p>
+<p>Nevada runs on cash, and Vegas moves mountains of it every day.</p>
+<p>That flow pushes its odds well past average, with an estimated 2,480 coins in play.</p>
+<div class="rg-pills"><span class="rg-pill"><b>Implied prob</b> 0.0760%</span><span class="rg-pill"><b>Odds</b> 1 in 1,315</span><span class="rg-pill"><b>Est. quarters</b> 2,480</span><span class="rg-pill"><b>Cash index</b> 1.122</span></div>
+</div>
+
+<div class="rg-entry">
+<h3><span class="rg-badge">9</span> Kentucky</h3>
+<p class="rg-details">Implied probability 0.0756% &middot; Odds 1 in 1,322 &middot; Est. quarters 3,470</p>
+<p>Kentucky holds ninth on everyday cash use.</p>
+<p>An estimated 3,470 coins circulate statewide, comfortably ahead of the national average.</p>
+<div class="rg-pills"><span class="rg-pill"><b>Implied prob</b> 0.0756%</span><span class="rg-pill"><b>Odds</b> 1 in 1,322</span><span class="rg-pill"><b>Est. quarters</b> 3,470</span><span class="rg-pill"><b>Cash index</b> 1.116</span></div>
+</div>
+
+<div class="rg-entry">
+<h3><span class="rg-badge">10</span> Tennessee</h3>
+<p class="rg-details">Implied probability 0.0755% &middot; Odds 1 in 1,325 &middot; Est. quarters 5,460</p>
+<p>Tennessee closes the top 10. Nashville and Memphis keep spending heavy on physical money.</p>
+<p>An estimated 5,460 coins are out there, one of the bigger pools on the list.</p>
+<div class="rg-pills"><span class="rg-pill"><b>Implied prob</b> 0.0755%</span><span class="rg-pill"><b>Odds</b> 1 in 1,325</span><span class="rg-pill"><b>Est. quarters</b> 5,460</span><span class="rg-pill"><b>Cash index</b> 1.114</span></div>
+</div>
+
+<div class="rg-embed">
+<iframe src="https://aharris-jpg.github.io/250-year-quarters/pic3.html" height="410" title="United States flag on Independence Day"></iframe>
+</div>
+
+<h2>The Coins Cluster Where the People Are</h2>
+<p>The odds favor small, cash-heavy states. The coins themselves go where the people are.</p>
+<p>The model spreads all 250,000 by population first, so the biggest states hold the most physical quarters even with mid-pack odds.</p>
+<table>
+<thead><tr><th>State</th><th>Est. quarters</th><th>Per-resident rank</th></tr></thead>
+<tbody>
+<tr><td>California</td><td>29,020</td><td>17th</td></tr>
+<tr><td>Texas</td><td>23,960</td><td>5th</td></tr>
+<tr><td>Florida</td><td>16,850</td><td>27th</td></tr>
+<tr><td>New York</td><td>14,840</td><td>14th</td></tr>
+<tr><td>Illinois</td><td>9,750</td><td>4th</td></tr>
+<tr><td>Pennsylvania</td><td>9,400</td><td>29th</td></tr>
+<tr><td>Ohio</td><td>8,730</td><td>19th</td></tr>
+</tbody>
+</table>
+<p>There is money on the line too. NGC will pay 2,500 dollars to the first person to submit one for grading. A quarter turned bounty.</p>
+<p>The split is stark. California holds an estimated 29,020 coins. Wyoming holds 410. Yet a Wyoming resident's odds barely trail California's, 0.070% to 0.074%.</p>
+
+<h2>Expert Comment</h2>
+<blockquote>
+<p>The surprising part is how little where you live matters. From the best state to the worst, your chances of finding one barely change.</p>
+<p>What really counts is cash. States that still spend a lot of physical money pass more coins through more hands, so a few more of the 250,000 turn up there.</p>
+<p>Even then the gap is small. The best state, Mississippi, is only about 17 percent ahead of the lowest.</p>
+<p>You do not find one of these by living in the right place. You find one by paying attention to your change.</p>
+</blockquote>
+<p class="rg-attrib">Data Analyst, RotoGrinders</p>
+
+<h2>Why the Map Barely Matters</h2>
+<p>The map barely tilts the odds. A rare 250 year quarter is about as findable in Jackson as in Burlington.</p>
+<p>Want one? Play the volume game. Handle more cash, check more change, and favor the places where physical money still moves fastest.</p>
+<p>The real story is scarcity. 250,000 coins across more than 340 million people means most Americans will never see one. That is exactly why the ones that surface will hold their pull long after the fireworks fade.</p>
+<p class="rg-closer">The odds are long everywhere. The trick is looking when everyone else has stopped.</p>
+
+<h2>Methodology</h2>
+<div class="rg-method">
+<p><b>What we measured.</b> Each state's estimated share of the 250,000 special July 4 privy mark quarters, and the resulting per-resident implied probability of finding one, shown as a percentage and as odds.</p>
+<p><b>When.</b> The coins entered circulation through banks nationwide ahead of July 4, 2026.</p>
+<p><b>How we scored it.</b> We weighted each state's 2024 Census population by a cash-handling index built from its 2023 FDIC unbanked rate, then split the 250,000 coins across states in proportion to that weighted figure.</p>
+<p><b>What we left out.</b> The District of Columbia, which is not a state, plus standard 2026 coins and collector sets, minted in the tens to hundreds of millions and too common to model as odds.</p>
+<p><b>Data extracted.</b> July 2026.</p>
+</div>
+
+<h2>Sources</h2>
+<ul class="rg-sources">
+<li>U.S. Mint: <a href="https://www.usmint.gov/news/press-releases/united-states-mint-to-produce-limited-edition-fourth-of-july-declaration-of-independence-quarters" target="_blank" rel="noopener">Fourth of July Declaration of Independence quarters, June 23, 2026</a></li>
+<li>U.S. Census Bureau: <a href="https://www.census.gov" target="_blank" rel="noopener">Vintage 2024 state population estimates</a></li>
+<li>FDIC: <a href="https://www.fdic.gov" target="_blank" rel="noopener">2023 National Survey of Unbanked and Underbanked Households</a></li>
+<li>Full dataset: <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vR9EdHYdM4tmha0f5_dCRe70TQAfwbVM-vFFEDCSwA1-T6n-QDRnXHvZkcy3mCznw/pubhtml" target="_blank" rel="noopener">Estimated 250th Anniversary Quarter Odds by State</a></li>
+</ul>
+
+</div>
