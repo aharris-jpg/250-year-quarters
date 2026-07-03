@@ -2,13 +2,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
 <style>
-  :root{--rg-accent:#F5A623;--rg-dark:#1E2433;--rg-border:#2E3548;}
+  :root{--rg-accent:#2B7DE0;--rg-dark:#14213D;--rg-border:#24314E;}
   *{box-sizing:border-box;}
   body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#23262e;background:#fff;}
   .wrap{max-width:720px;margin:0 auto;border:1px solid var(--rg-border);border-radius:12px;overflow:hidden;}
   .head{position:relative;background:var(--rg-dark);color:#fff;padding:18px 20px 16px;}
   .strip{position:absolute;top:0;left:0;right:0;height:4px;
-    background:linear-gradient(90deg,var(--rg-dark),var(--rg-accent),#ffd98a,var(--rg-accent),var(--rg-dark));
+    background:linear-gradient(90deg,var(--rg-dark),var(--rg-accent),#a9cdf5,var(--rg-accent),var(--rg-dark));
     background-size:200% 100%;animation:sh 4s linear infinite;}
   @keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
   .head h2{margin:0;font-family:"Source Serif 4",Georgia,serif;font-size:20px;font-weight:700;}
@@ -18,11 +18,11 @@
   .state{stroke:#fff;stroke-width:2.5px;}
   .legend{padding:4px 22px 2px;}
   .lgbar{height:12px;border-radius:6px;
-    background:linear-gradient(90deg,#fff7e6,#fde3a7,#f8c14f,#F5A623,#d97b0a,#a8530a);}
+    background:linear-gradient(90deg,#eef4fc,#c3dbf6,#7db2ec,#2B7DE0,#1a5bb0,#14213D);}
   .lgticks{display:flex;justify-content:space-between;font-size:11px;color:#6b6f78;margin-top:4px;}
   .lglab{font-size:11px;color:#6b6f78;margin:2px 0 0;}
   .foot{display:flex;align-items:center;justify-content:space-between;gap:10px;
-    padding:12px 20px 16px;border-top:1px solid #ece9e3;margin-top:8px;}
+    padding:12px 20px 16px;border-top:1px solid #e6e9ee;margin-top:8px;}
   .foot .src{font-size:11px;color:#6b6f78;max-width:70%;}
   .logo{font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:15px;color:var(--rg-dark);}
   .logo span{color:var(--rg-accent);}
@@ -47,7 +47,7 @@
 <script>
   var VALS={"28":{"n":"Mississippi","p":0.0805,"o":"1 in 1,242","g":1.0},"22":{"n":"Louisiana","p":0.0786,"o":"1 in 1,272","g":0.9796},"13":{"n":"Georgia","p":0.0773,"o":"1 in 1,294","g":0.9592},"17":{"n":"Illinois","p":0.0767,"o":"1 in 1,303","g":0.9388},"48":{"n":"Texas","p":0.0766,"o":"1 in 1,306","g":0.9184},"05":{"n":"Arkansas","p":0.0764,"o":"1 in 1,308","g":0.898},"40":{"n":"Oklahoma","p":0.0762,"o":"1 in 1,313","g":0.8776},"32":{"n":"Nevada","p":0.076,"o":"1 in 1,315","g":0.8571},"21":{"n":"Kentucky","p":0.0756,"o":"1 in 1,322","g":0.8367},"47":{"n":"Tennessee","p":0.0755,"o":"1 in 1,325","g":0.8163},"45":{"n":"South Carolina","p":0.075,"o":"1 in 1,334","g":0.7959},"35":{"n":"New Mexico","p":0.075,"o":"1 in 1,334","g":0.7755},"01":{"n":"Alabama","p":0.0748,"o":"1 in 1,337","g":0.7551},"36":{"n":"New York","p":0.0747,"o":"1 in 1,339","g":0.7347},"18":{"n":"Indiana","p":0.0743,"o":"1 in 1,346","g":0.7143},"34":{"n":"New Jersey","p":0.0741,"o":"1 in 1,349","g":0.6939},"06":{"n":"California","p":0.0736,"o":"1 in 1,359","g":0.6735},"54":{"n":"West Virginia","p":0.0736,"o":"1 in 1,359","g":0.6531},"39":{"n":"Ohio","p":0.0735,"o":"1 in 1,361","g":0.6327},"46":{"n":"South Dakota","p":0.0729,"o":"1 in 1,371","g":0.6122},"37":{"n":"North Carolina","p":0.0725,"o":"1 in 1,379","g":0.5918},"15":{"n":"Hawaii","p":0.0725,"o":"1 in 1,379","g":0.5714},"10":{"n":"Delaware","p":0.0725,"o":"1 in 1,379","g":0.551},"29":{"n":"Missouri","p":0.0724,"o":"1 in 1,382","g":0.5306},"20":{"n":"Kansas","p":0.0724,"o":"1 in 1,382","g":0.5102},"24":{"n":"Maryland","p":0.0724,"o":"1 in 1,382","g":0.4898},"26":{"n":"Michigan","p":0.0721,"o":"1 in 1,387","g":0.4694},"12":{"n":"Florida","p":0.0721,"o":"1 in 1,387","g":0.449},"42":{"n":"Pennsylvania","p":0.0718,"o":"1 in 1,392","g":0.4286},"04":{"n":"Arizona","p":0.0718,"o":"1 in 1,392","g":0.4082},"09":{"n":"Connecticut","p":0.0717,"o":"1 in 1,395","g":0.3878},"44":{"n":"Rhode Island","p":0.0717,"o":"1 in 1,395","g":0.3673},"25":{"n":"Massachusetts","p":0.0716,"o":"1 in 1,397","g":0.3469},"23":{"n":"Maine","p":0.0713,"o":"1 in 1,403","g":0.3265},"31":{"n":"Nebraska","p":0.0712,"o":"1 in 1,405","g":0.3061},"16":{"n":"Idaho","p":0.0712,"o":"1 in 1,405","g":0.2857},"02":{"n":"Alaska","p":0.0708,"o":"1 in 1,413","g":0.2653},"30":{"n":"Montana","p":0.0705,"o":"1 in 1,419","g":0.2449},"55":{"n":"Wisconsin","p":0.0705,"o":"1 in 1,419","g":0.2245},"41":{"n":"Oregon","p":0.0705,"o":"1 in 1,419","g":0.2041},"53":{"n":"Washington","p":0.0702,"o":"1 in 1,424","g":0.1837},"56":{"n":"Wyoming","p":0.0702,"o":"1 in 1,424","g":0.1633},"27":{"n":"Minnesota","p":0.0701,"o":"1 in 1,427","g":0.1429},"38":{"n":"North Dakota","p":0.0701,"o":"1 in 1,427","g":0.1224},"19":{"n":"Iowa","p":0.0699,"o":"1 in 1,430","g":0.102},"49":{"n":"Utah","p":0.0694,"o":"1 in 1,441","g":0.0816},"08":{"n":"Colorado","p":0.0693,"o":"1 in 1,444","g":0.0612},"33":{"n":"New Hampshire","p":0.0693,"o":"1 in 1,444","g":0.0408},"51":{"n":"Virginia","p":0.069,"o":"1 in 1,449","g":0.0204},"50":{"n":"Vermont","p":0.069,"o":"1 in 1,449","g":0.0}};
   var ramp=d3.scaleLinear().domain([0,.2,.4,.6,.8,1])
-    .range(["#fff7e6","#fde3a7","#f8c14f","#F5A623","#d97b0a","#a8530a"]).clamp(true);
+    .range(["#eef4fc","#c3dbf6","#7db2ec","#2B7DE0","#1a5bb0","#14213D"]).clamp(true);
   var svg=d3.select("#map"),W=720,H=440;
   var proj=d3.geoAlbersUsa().scale(900).translate([W/2,H/2]);
   var path=d3.geoPath(proj);
@@ -57,7 +57,7 @@
       .attr("class","state").attr("d",path)
       .attr("fill",function(d){
         var id=("0"+d.id).slice(-2);var rec=VALS[id];
-        return rec?ramp(rec.g):"#efe9dd";
+        return rec?ramp(rec.g):"#eef0f3";
       });
   });
 </script>
